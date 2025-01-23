@@ -1,0 +1,103 @@
+---
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    networks:
+      - media # Specifying Network for media Services
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun # Device need for Tunnel Creation
+    environment:
+      - VPN_SERVICE_PROVIDER=mullvad # For Different VPN Provider follow https://github.com/qdm12/gluetun-wiki/tree/main/setup/providers
+      - VPN_TYPE=wireguard
+      - WIREGUARD_PRIVATE_KEY=PRIVATE_KEY # Private Key for Wireguard
+      - WIREGUARD_ADDRESSES=ADDRESSES # Address from Wireguard Config (ipv6 needs to be configured in Docker)
+      - SERVER_COUNTRIES=Sweden,Netherlands
+      - OWNED_ONLY=yes # Only use Servers owned by Mullvad
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0 # Enable ipv6
+    ports:
+      - 8085:8085 # Sabnzbd Port
+      - 8080:8080 # Qbittorrent WebUI Port
+      - 6881:6881 # Qbittorrent Connection Port
+      - 6881:6881/udp # Qbittorrent Connection Port
+    healthcheck:
+      test: ping -c 1 1.1.1.1
+      interval: 60s
+      retries: 3
+      start_period: 20s
+      timeout: 10s
+    volumes:
+      - ./data:/gluetun
+    restart: unless-stopped
+
+  sabnzbd:
+    image: lscr.io/linuxserver/sabnzbd
+    container_name: sabnzbd
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Europe/Berlin
+    network_mode: "service:gluetun"
+    healthcheck:
+      test: ping -c 1 1.1.1.1
+      interval: 60s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    volumes:
+      - ./config/sabnzbd:/config
+      - /downloads:/downloads
+    depends_on:
+      gluetun:
+        condition: service_healthy
+        restart: True
+    restart: unless-stopped
+
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Europe/Berlin
+    network_mode: "service:gluetun"
+    healthcheck:
+      test: ping -c 1 1.1.1.1
+      interval: 60s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    volumes:
+      - ./config/qbittorrent:/config
+      - /downloads:/downloads
+    depends_on:
+      gluetun:
+        condition: service_healthy
+        restart: True
+    restart: unless-stopped
+
+  flood:
+    image: jesec/flood
+    container_name: flood
+    user: 1001:1001
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Europe/Berlin
+      - HOME=/config
+    command: --port 8081 --allowedpath /downloads
+    networks:
+      - media
+    ports:
+      - 8081:8081
+    volumes:
+      - ./config/flood:/config
+      - /downloads:/downloads
+    restart: unless-stopped
+
+networks:
+  media:
+    external: true
