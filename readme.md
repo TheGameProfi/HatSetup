@@ -10,6 +10,7 @@ Media Management:
 - [Bazarr](media/bazarr.md) is a Services for Managing Subtitles. It scans the local files (including the Vidoes embeded ones) and grabs missing Subtitles from the Internet.
 - [Jackett](media/jackett.md) is a Torrent Convertion Service. It access many Torrent Providers and translate the API/Data into something Sonarr/Radarr/Readarr/Lidarr/... compatible.
 - [Prowlarr](media/prowlarr.md) is a indexer Manager/Proxy. It's a central management to syncronize Sonarr/Radarr/Readarr/Lidarr/...
+- [Beets](media/beets.md) is a Music Library Manager. It access the local Music Files and organizes them and the metadata.
 
 Download Management:
 - [Gluetun](download/gluetun.md) is VPN-Client and Proxy for Docker. All traffic is routed trough it and ports are forwarded from the Services.
@@ -36,6 +37,7 @@ flowchart
     Sonarr & Radarr & Readarr --> Gluetun & Flood & Jackett
     Bazarr --> Sonarr & Radarr
     Prowlarr --> Sonarr & Radarr & Readarr
+    Beets
     end
 
     subgraph Streaming
