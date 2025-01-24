@@ -9,6 +9,7 @@ Media Management:
 - [Readarr](media/readarr.md) is a Services for Managing Books/Comics. Managing the local files, Book Naming via Book Database and Grabbing new Books from the Internet.
 - [Bazarr](media/bazarr.md) is a Services for Managing Subtitles. It scans the local files (including the Vidoes embeded ones) and grabs missing Subtitles from the Internet.
 - [Jackett](media/jackett.md) is a Torrent Convertion Service. It access many Torrent Providers and translate the API/Data into something Sonarr/Radarr/Readarr/Lidarr/... compatible.
+- [Prowlarr](media/prowlarr.md) is a indexer Manager/Proxy. It's a central management to syncronize Sonarr/Radarr/Readarr/Lidarr/...
 
 Download Management:
 - [Gluetun](download/gluetun.md) is VPN-Client and Proxy for Docker. All traffic is routed trough it and ports are forwarded from the Services.
@@ -34,6 +35,7 @@ flowchart
     subgraph Media
     Sonarr & Radarr & Readarr --> Gluetun & Flood & Jackett
     Bazarr --> Sonarr & Radarr
+    Prowlarr --> Sonarr & Radarr & Readarr
     end
 
     subgraph Streaming
