@@ -2,7 +2,15 @@
 
 ## Description
 
-Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+Sonarr is an advanced PVR (Personal Video Recorder) for automatically managing and downloading TV series. It seamlessly integrates with your favorite download clients and indexers, providing an automated way to track, download, and organize your shows.
+
+Key Features:
+- Automatically tracks and downloads TV series.
+- Supports multiple download clients like Usenet and BitTorrent.
+- Advanced episode monitoring with custom quality profiles.
+- Easy integration with indexers through built-in support for over 500 options.
+- Renames and organizes episodes to match your preferred structure.
+- Full API for integration with other tools and services.
 
 
 ## Docker-Compose Setup

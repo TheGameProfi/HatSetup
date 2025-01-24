@@ -2,7 +2,14 @@
 
 ## Description
 
-SABnzbd is an Newsreader. It has the ability to connect to multiple Newshoster and automated Archive Extraction.
+SABnzbd is a popular, open-source Usenet binary newsreader that automates the process of downloading, unpacking, and sorting files from Usenet newsgroups. With an easy-to-use web interface and powerful automation features, it simplifies Usenet downloading for users of all experience levels.
+
+Key Features:
+- Fully automated download and extraction process.
+- Supports NZB files and integrates with popular automation tools (Sonarr, Radarr, etc.).
+- Built-in post-processing features for unpacking, repairing, and categorizing downloaded content.
+- Supports SSL, and configurable Usenet provider settings for optimal performance.
+- Web-based interface with customizable themes and mobile-friendly access.
 
 
 ## Docker-Compose Setup

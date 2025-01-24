@@ -1,7 +1,14 @@
 # Radarr
 
 ## Description
-Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported. If you want both a 4k version and 1080p version of a given movie you will need multiple instances.
+Radarr is a powerful movie collection manager that helps you automate the process of tracking, downloading, and organizing movies. It integrates seamlessly with popular download clients and indexers, making it easy to maintain and expand your movie library.
+
+Key Features:
+- Automatically tracks and downloads movies.
+- Supports Usenet and BitTorrent download clients.
+- Customizable quality profiles to manage resolution and formats.
+- Built-in support for hundreds of public and private indexers.
+- Organizes and renames movies based on your preferred structure.
 
 ## Docker-Compose Setup
 

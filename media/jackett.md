@@ -1,7 +1,13 @@
 # Jackett
 
 ## Description
-Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato, Mylar3, Lidarr, DuckieTV, qBittorrent, Nefarious, NZBHydra2 etc.) into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches. Jackett is a single repository of maintained indexer scraping & translation logic - removing the burden from other apps.
+Jackett is an API support service that acts as a proxy for various BitTorrent and Usenet indexers, allowing them to work seamlessly with automation tools like Sonarr, Radarr, and Lidarr. It provides a unified interface for accessing and searching indexers, simplifying media automation.
+
+Key Features:
+- Acts as a bridge between automation tools and indexers.
+- Supports over 500 public and private BitTorrent and Usenet indexers.
+- Provides a unified API for easy integration with tools like Sonarr, Radarr, Lidarr, and Prowlarr.
+- Customizable search filters for fine-tuned results.
 
 ## Docker-Compose Setup
 

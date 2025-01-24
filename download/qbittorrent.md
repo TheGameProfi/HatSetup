@@ -5,8 +5,15 @@
 
 ### Description
 
-qBittorrent is a bittorrent client that connects to various Seeders and download the Files. <br />
-When the Download is finished the Files are getting "seeded", meaing that the Files are getting shared with other Users all over the World who are trying to download the same Files.
+qBittorrent is a fast, lightweight, and open-source BitTorrent client that provides a clean, user-friendly interface and a wealth of features. It supports all major torrenting protocols, including DHT, PEX, and encryption, while offering powerful options for managing torrents and trackers.
+
+Key Features:
+- Lightweight and easy-to-use interface.
+- Full support for all major BitTorrent protocols, including DHT, PEX, and Magnet links.
+- Built-in torrent search engine (with customizable indexers).
+- Sequential downloading, bandwidth prioritization, and scheduling.
+- Integrated media player for playback of downloaded content.
+- Support for IP filtering, proxy settings, and encryption for privacy.
 
 ### Docker-Compose Setup
 
@@ -63,7 +70,16 @@ The Healtcheck visualize if the Container is healthy connected to the VPN.
 
 ### Description
 
-Flood is a Service that manages the Torrent Downloads. It's an more modern UI for various Torrent Clients.
+Flood (flood-ui) is a modern, web-based user interface for managing and interacting with torrent clients such as qBittorrent, Transmission, and Deluge. With an intuitive design and real-time updates, it provides an easy way to control and monitor your torrent downloads from any device with a web browser.
+
+Key Features:
+- Web-based UI for managing torrents remotely.
+- Compatible with multiple torrent clients (qBittorrent, Transmission, Deluge, etc.).
+- Real-time updates on torrent status, download speed, and more.
+- Easy-to-navigate interface with detailed statistics and control options.
+- Fully responsive and mobile-friendly.
+- Authentication support for secure access.
+- Open-source and lightweight, with an emphasis on simplicity.
 
 ### Docker-Compose Setup
 

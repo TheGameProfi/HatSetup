@@ -1,7 +1,14 @@
 # Jellyseer
 
 ## Description
-Jellyseerr is a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.
+Jellyseer is a lightweight, open-source client for managing and interacting with Jellyfin media servers. It provides an easy-to-use interface for controlling playback, managing libraries, and monitoring server status from a web-based dashboard.
+
+Key Features:
+- Control Jellyfin servers remotely from any device with a web browser.
+- Manage libraries, playlists, and media content with ease.
+- Monitor server status, including media playback and system performance.
+- Fully open-source and lightweight with no server installation required.
+- Cross-platform compatibility (works on any device with a browser).
 
 ## Docker-Compose Setup
 

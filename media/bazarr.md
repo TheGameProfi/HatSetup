@@ -2,7 +2,14 @@
 
 ## Description
 
-Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.
+Bazarr is an automated subtitle manager that works alongside tools like Sonarr and Radarr to download and manage subtitles for your TV shows and movies. It integrates with multiple subtitle providers, ensuring your media library always has the subtitles you need.
+
+Key Features:
+- Automatically downloads subtitles for TV shows and movies.
+- Integrates seamlessly with Sonarr, Radarr, and Plex.
+- Supports multiple subtitle providers, including OpenSubtitles, Addic7ed, and more.
+- Customizable language and quality settings for subtitles.
+- Monitors your library to ensure subtitles are always up to date.
 
 ## Docker-Compose Setup
 

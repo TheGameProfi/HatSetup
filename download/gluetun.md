@@ -1,6 +1,6 @@
 # Gluetun
 
-## Description
+## Overview
 
 Best Practice is to keep all the Hat touching the Outside World behind a VPN.
 With Gluetun we can create a VPN Tunnel which the services can use to connect to the Internet, also it has a build-in Proxy to allow us to connect to the Services.
@@ -8,8 +8,17 @@ With Gluetun we can create a VPN Tunnel which the services can use to connect to
 The other container need to be Setup with the Network mode to the Gluetun Container with ```network_mode: service:gluetun``` or ```network_mode: container:gluetun``` or as CLI ```--network=container:gluetun```... <br />
 Since the Network-Mode is a Override the Port need to be Exposed from the Gluetun Container and not the other Containers.
 
-(Gluetun is a thin Docker container for multiple VPN providers, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in.)
+## Description
 
+Gluetun is an open-source VPN client that allows you to securely route your network traffic through a VPN server, providing enhanced privacy and anonymity. It can be easily integrated with Docker and is designed to work seamlessly with other services like qBittorrent, Plex, and more, making it ideal for securing your internet connection while running various applications.
+
+Key Features:
+- Supports multiple VPN providers (e.g., Mullvad, NordVPN, PIA, etc.).
+- Easy-to-setup and configure with Docker.
+- DNS and IP leak protection.
+- Provides a simple web interface for monitoring VPN connections.
+- Customizable firewall rules for better network security.
+- Supports both OpenVPN and WireGuard protocols.
 
 ## Docker Compose Setup
 

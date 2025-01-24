@@ -1,7 +1,16 @@
 # Jellyfin
 
 ## Description
-Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it. We welcome anyone who is interested in joining us in our quest!
+Jellyfin is a free and open-source media server that lets you manage, stream, and enjoy your media library across multiple devices. Whether it’s movies, TV shows, music, or photos, Jellyfin provides a self-hosted solution with full control over your content.
+
+Key Features:
+- No stings attached, no ads, and no Premium Versions.
+- Stream movies, TV shows, music, and photos to any device.
+- Fully self-hosted and open-source with no subscription fees.
+- Multi-user support with custom permissions and profiles.
+- Integration with popular clients on web, mobile, smart TVs, and more.
+- Transcoding support for smooth playback on various devices.
+- Plugins and customizations to extend functionality.
 
 ## Docker-Compose Setup
 

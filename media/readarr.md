@@ -3,7 +3,14 @@
 Readarr is currently in beta testing and is generally still in a work in progress. Features may be broken, incomplete, or cause spontaneous combustion
 
 ## Description
-Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will grab, sort, and rename them. Note that only one type of a given book is supported. If you want both an audiobook and ebook of a given book you will need multiple instances.
+Readarr is an automated eBook and audiobook manager designed to help you track, download, and organize your digital library. It integrates with popular download clients and indexers to simplify managing your reading collection.
+
+Key Features:
+- Automatically tracks and downloads eBooks and audiobooks.
+- Supports multiple download clients, including Usenet and BitTorrent.
+- Custom quality profiles for different formats (ePub, PDF, Mobi, etc.).
+- Built-in support for public and private indexers.
+- Organizes and renames books based on your preferences.
 
 ## Docker-Compose Setup
 
