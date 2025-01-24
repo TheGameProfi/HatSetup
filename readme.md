@@ -16,6 +16,7 @@ Download Management:
 - [Gluetun](download/gluetun.md) is VPN-Client and Proxy for Docker. All traffic is routed trough it and ports are forwarded from the Services.
 - [Sabnzbd](download/sabnzbd.md) is a Usenet Download Manager. It access the NewsProvider to download the "Articles" requested by the Indexer.
 - [Qbittorrent](download/qbittorrent.md#qbittorrent) is a Torrent Download Manager. It access available Torrent-Seeders to download the "Torrents" requested by the Indexer.
+- [Deluge](download/deluge.md) is a Torrent Download Manager. It access available Torrent-Seeders to download the "Torrents" requested by the Indexer.
 - [Flood](download/qbittorrent.md#flood) is a Web-UI for multiple Torrent Clients, originally named Flood-UI.
 
 Streaming Services:
@@ -29,8 +30,8 @@ Streaming Services:
 flowchart
     subgraph Download
     Gluetun
-    SABnzbd & qBittorrent <--> Gluetun
-    Flood <--> qBittorrent
+    SABnzbd & torrent[qBittorrent/ <br> Deluge] <--> Gluetun
+    Flood <--> torrent
     end
 
     subgraph Media
